@@ -1,4 +1,4 @@
-// pages/about/about.js
+// pages/view/view.js
 Page({
 
   /**

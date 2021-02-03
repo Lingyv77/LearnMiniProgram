@@ -1,13 +1,33 @@
-// pages/home/home.js
+// pages/image/image.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    imagePath: '',
+    count: 0
   },
-
+  handleChooseAlbum(){
+    wx.chooseImage({ //系统API, 让用户在相册中选择图片/或拍照
+      success: (res) => {
+        //1.取出路径
+        const path = res.tempFilePaths[0];
+        
+        //2.设置imagePath
+        this.setData({
+          imagePath: path
+        })
+      }
+    })
+  },
+  imageLoad() {
+    let counter = this.data.count + 1;
+    console.log('图片加载完成第' +counter+ '张');
+    this.setData({
+      count: counter
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
