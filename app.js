@@ -1,39 +1,42 @@
 // app.js
-App({
-  onLaunch() {
-    // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+App({ 
+  /**
+   * 生命周期函数: 会在后台存活一段时间
+   * 小程序初始化完成时, 会执行的生命周期函数
+   */
 
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-            }
-          })
-        }
+  onLaunch: function () { //小程序初始化完成时, 执行的生命周期函数
+    console.log('小程序初始化已结束: onLaunch');
+    wx.getUserInfo({ //第一种, 获取用户信息
+      success: function (res) {
+        console.log(res.userInfo);
       }
     })
   },
+  onShow: function (options) { //小程序界面显示出来后会执行的生命周期函数
+    console.log('界面已显示: onShow');
+    //1.判断小程序进入场景
+    console.log(options);
+    switch(options.scene) {
+      case 1001:
+        break;
+      case 1005:
+        break;
+    }
+
+    setTimeout(() => {
+      // throw new Error('test error'); //测试onError 函数生命周期函数
+    }, 3000)
+  },
+  onHide: function (options) {
+    console.log('页面已被隐藏: onHide');
+  },
+  onError: function (msg) {
+    console.log('程序出现错误: onError')
+  },
   globalData: {
-    userInfo: null
+    name: "Lingyv77",
+    age: '17'
   }
+  
 })

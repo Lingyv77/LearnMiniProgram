@@ -1,0 +1,21 @@
+<text>homeText</text>
+<!-- {{}}变量语法 -->
+<view>{{name}}</view>
+<view>我的年龄: {{age + "岁"}}</view>
+<button>look books</button>
+<!-- wx:for循环 -->
+<!-- <view wx:for="{{books}}">{{item.name}}--￥{{item.price}}</view> -->
+<view>当前计数:{{count}}</view>
+<button size="mini" bindtap="addCount">+</button>
+<button size="mini" bindtap="reduceCount">-</button>
+
+<!-- 第二种, 获取用户信息方式 -->
+<button size="mini" 
+        open-type="getUserInfo" 
+        bindgetuserinfo="getUserData">
+  获取授权用户信息
+</button>
+
+<!-- 第三种, '展示' 用户信息方式 -->
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>

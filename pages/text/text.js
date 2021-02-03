@@ -1,66 +1,63 @@
+<<<<<<< HEAD:pages/text/text.js
 // pages/text/text.js
 Page({
+=======
+//getApp()获取App产生的实例
+const app = new getApp();
+>>>>>>> 38b18338a2dea96533eb4c5e3ec20d41285b1428:pages/home/home.js
 
+const name = app.globalData.name;
+Page({ //注册一个页面
   /**
    * 页面的初始数据
    */
+  getUserData(event) {
+    console.log(event);
+  },
   data: {
-
+    name,
+    age: app.globalData.age,
+    count: 0,
+    books: [
+      {
+          id: 1,
+          name: '《算法导论》',
+          date: '2006-9',
+          price: 85.00,
+          count: 1
+      },
+      {
+          id: 2,
+          name: '《UNIX编程艺术》',
+          date: '2006-2',
+          price: 59.00,
+          count: 1
+      },
+      {
+          id: 3,
+          name: '《编程珠玑》',
+          date: '2008-10',
+          price: 39.00,
+          count: 1
+      },
+      {
+          id: 4,
+          name: '《代码大全》',
+          date: '2006-3',
+          price: 128.00,
+          count: 1
+      },
+  ]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  addCount() {
+    // this.data.count++; 不会实时监听
+    this.setData({
+      count: this.data.count + 1
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  reduceCount() {
+    this.setData({
+      count: this.data.count - 1
+    })
   }
 })

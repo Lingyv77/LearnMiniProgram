@@ -1,11 +1,55 @@
 {
   "pages": [
+<<<<<<< HEAD
     "pages/scroll/scroll",
     "pages/input/input",
     "pages/image/image",
     "pages/button/button",
     "pages/text/text",
     "pages/view/view"
+=======
+    "pages/home/home",
+    "pages/about/about",
+    "pages/profile/profile",
+    "pages/category/category"
+>>>>>>> 38b18338a2dea96533eb4c5e3ec20d41285b1428
   ],
-  "sitemapLocation": "sitemap.json"
+  "window": {
+    "navigationBarBackgroundColor": "#ececec",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "购物街",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#ff0000",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "assets/img/tabbar/ico3.png",
+        "selectedIconPath": "assets/img/tabbar/ico3_hover.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "assets/img/tabbar/ico4.png",
+        "selectedIconPath": "assets/img/tabbar/ico4_hover.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "assets/img/tabbar/ico5.png",
+        "selectedIconPath": "assets/img/tabbar/ico5_hover.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "个人",
+        "iconPath": "assets/img/tabbar/ico6.png",
+        "selectedIconPath": "assets/img/tabbar/ico6_hover.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap24.json"
 }
