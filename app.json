@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/scroll/scroll",
+    "pages/input/input",
+    "pages/image/image",
+    "pages/button/button",
+    "pages/text/text",
+    "pages/view/view"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

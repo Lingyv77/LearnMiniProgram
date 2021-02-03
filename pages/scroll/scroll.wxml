@@ -1,0 +1,23 @@
+<!-- 
+  scroll-veiw 基本使用:
+    1.设置滚动
+
+  scroll-veiw属性:
+    scroll-x: 设置水平滚动,
+    scroll-y: 设置垂直滚动,
+    bindscroll: 监听滚动事件
+ -->
+ <!-- 
+   scroll-x: 水平滚动
+  -->
+ <scroll-view class="container" scroll-x>
+   <view wx:for="{{20}}" wx:key="id">{{item}}</view>
+ </scroll-view>
+ <scroll-view class="container2" scroll-y>
+   <view wx:for="{{20}}" wx:key="id">{{item}}</view>
+ </scroll-view>
+ <scroll-view class="container2" 
+              scroll-y  
+              bindscroll="handleScroll"> 
+   <view wx:for="{{20}}" wx:key="id">{{item}}</view>
+ </scroll-view>
