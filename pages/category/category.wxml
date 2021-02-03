@@ -1,0 +1,2 @@
+<text>分类页面哦</text>
+<view wx:for="{{list}}" wx:key="id">{{item.title}}</view>
