@@ -1,5 +1,0 @@
-input {
-  border: 1px solid green;
-  padding: 3px 10px;
-  margin: 10px;
-}

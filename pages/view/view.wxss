@@ -1,7 +1,0 @@
-.box {
-  background-color: yellow;
-}
-.box_hover {
-  background-color: green;
-  color: white;
-}
