@@ -1,18 +1,9 @@
 {
   "pages": [
-<<<<<<< HEAD
-    "pages/scroll/scroll",
-    "pages/input/input",
-    "pages/image/image",
-    "pages/button/button",
-    "pages/text/text",
-    "pages/view/view"
-=======
     "pages/home/home",
     "pages/about/about",
     "pages/profile/profile",
     "pages/category/category"
->>>>>>> 38b18338a2dea96533eb4c5e3ec20d41285b1428
   ],
   "window": {
     "navigationBarBackgroundColor": "#ececec",
