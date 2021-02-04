@@ -1,3 +1,58 @@
-<!--pages/home/home.wxml-->
 <text>home</text>
 <button>按钮</button>
+<!-- 
+  longtap 和 touchstart 都执行 ,则tap不执行
+  handleTap(event)
+  event属性:
+    type: 'tap' 触发的事件类型 
+    timeStamp: Number(12069) 打开页面到触发事件经过的毫秒数
+    target: {id: "switch", offsetLeft: 0, offsetTop: 67, dataset: {}} 触发事件的对象 记录当前组件属性
+    currentTarget: {{identifier: 0, pageX: 32, pageY: 126.0000228881836, clientX: 32, clientY: 126.0000228881836, …} length: 1 nv_length: (...)}
+      也是触发事件的对象 记录当前组件属性
+    detail: {x: Number(81.5687255859375), y: Number(137.56858825683594)} 当前记录点击的位置
+    touches: 也是记录点击位置[数组] 记录多个点击位置
+    changeTouches: 记录手指在频幕上的变化
+ -->
+<view class='box' id="switch"
+      bind:tap = "handleTap"
+      bind:longtap = "handleLongtap"
+      bind:touchstart = "handleTouchstart"
+      bind:touchmove = "handleTouchmove"
+      bind:touchend = "handleTouchend">
+</view>
+<!-- 
+  点击内部view 则currentTarget: id = 'outer', target: id = 'inner'
+  currentTarget: 触发事件的组件对象
+  target: 产生事件的组件对象
+ -->
+<view id="outer" bindtap="outerTap">
+  外部view
+  <view id="inner" bindtap="innerTap">内部view</view>
+</view>
+
+<!-- 
+   data-item="{{item}}",  data-index="{{index}}" 传入参数进入 target: {dataset: {index: 传入index,item: 传入item}}
+ -->
+<view class="container2">
+  <block wx:for="{{['衣服','裤子','鞋子']}}" wx:key='id'>
+    <view class="item" 
+          bindtap="handleItemClick"
+          data-item="{{item}}"
+          data-index="{{index}}">
+      {{item}}
+    </view>
+  </block>
+</view>
+
+<!-- 
+  事件冒泡与捕获 
+  捕获 view1 -> view2 -> view3 -> 冒泡 view1 -> view2 -> view3
+  capture-bind:tap 事件的捕获
+  bind: 会层层传递
+  catch: 阻止事件的进一步传递
+ -->
+<view class="view1" capture-bind:tap="handleCaptrueView1" bindtap="handleBindView1">
+  <view class="view2" capture-bind:tap="handleCaptrueView2" catchtap="handleBindView2">
+    <view class="view3" capture-catch:tap="handleCaptrueView3" bindtap="handleBindView3"></view>
+  </view>
+</view>
