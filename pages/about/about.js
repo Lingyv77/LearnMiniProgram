@@ -39,6 +39,17 @@ Page({
   handleShowActionSheet() {
     wx.showActionSheet({
       itemList: ['相册','拍照'],
+      itemColor: 'green',
+      success(res) {
+        console.log(res)
+      }
     })
+  },
+  onShareAppMessage(options) { //分享
+    return {
+      title: '新年好',
+      imageUrl: 'http://img.netbian.com/file/2020/0809/1200106635d0f186f62877257fb3607a.jpg', //默认当前面截图
+      path: '/pages/about/about',
+    }
   }
 })

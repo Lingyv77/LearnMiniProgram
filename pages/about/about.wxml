@@ -9,3 +9,6 @@
 
 <!-- ActionSheet-->
 <button size="mini" bindtap="handleShowActionSheet">showActionSheet</button>
+
+<!-- 分享按钮 -->
+<button open-type="share" size="mini">分享</button>
