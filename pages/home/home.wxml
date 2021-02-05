@@ -23,7 +23,7 @@
 <!-- 
   点击内部view 则currentTarget: id = 'outer', target: id = 'inner'
   currentTarget: 触发事件的组件对象
-  target: 产生事件的组件对象
+  target: 产生事件的组件对象 
  -->
 <view id="outer" bindtap="outerTap">
   外部view
