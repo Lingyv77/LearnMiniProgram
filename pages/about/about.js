@@ -5,7 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    counter: 0
+  },
+  handleIncurrement(event) {
+    console.log(event);
+    this.setData({
+      counter: this.data.counter + 1
+    })
+  },
+  handletabClick(event) {
+    console.log(event)
+  },
+  handleSelClick() {
+    // this.selectComponent('class/id') 类似vue中$refs
+    const my_sel = this.selectComponent('#my-sel');
+    // my_sel.setData({
+    //   counter: my_sel.data.counter + 300
+    // })
+    my_sel.addCounter(10) //回调且传递参数my-sel内的methods
   },
 
   /**

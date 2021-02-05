@@ -4,6 +4,7 @@
     "ignore": []
   },
   "setting": {
+    "checkSiteMap": false,
     "bundle": false,
     "userConfirmedBundleSwitch": false,
     "urlCheck": true,
@@ -33,7 +34,7 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.0.4",
+  "libVersion": "2.15.0",
   "appid": "wxe53ea30e1d05eeb3",
   "projectname": "miniprogram-1",
   "debugOptions": {

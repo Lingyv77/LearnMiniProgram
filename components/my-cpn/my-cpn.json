@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "comp-own": "/components/comp-own/comp-own"
+  }
+}

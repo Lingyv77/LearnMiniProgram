@@ -1,0 +1,25 @@
+.tab-control {
+  display: flex;
+  text-align: center;
+  background-color: rgb(243, 240, 240);
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.tab-item {
+  flex: 1;
+}
+
+.active {
+  color: red;
+  position: relative;
+}
+.active::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 5rpx;
+  background-color: green;
+  position: absolute;
+  bottom: 10rpx;
+  left: 20%;
+}

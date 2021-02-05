@@ -1,1 +1,16 @@
 /* pages/about/about.wxss */
+.title {
+  color: red;
+}
+
+.contents {
+  font-size: 50rpx;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.blue {
+  color:blue;
+}
