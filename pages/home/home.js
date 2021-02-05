@@ -7,49 +7,6 @@ Page({
   data: {
 
   },
-  handleTap() {
-    console.log('bindtap');
-    console.log(arguments[0])
-  },
-  handleLongtap() {
-    console.log('bindlongtap');
-  },
-  handleTouchstart() {
-    console.log('bindtouchstart');
-  },
-  handleTouchmove() {
-    console.log('bindtouchmove');
-  },
-  handleTouchend() {
-    console.log('bindtouchend');
-  },
-  outerTap(event) {
-    console.log(event);
-  },
-  innerTap(event) {
-    console.log(event);
-  },
-  handleItemClick(event) {
-    console.log(event);
-  },
-  handleCaptrueView1() {
-    console.log('handleCaptrueView1');
-  },
-  handleCaptrueView2() {
-    console.log('handleCaptrueView2');
-  },
-  handleCaptrueView3() {
-    console.log('handleCaptrueView3');
-  },
-  handleBindView1() {
-    console.log('handleBindView1');
-  },
-  handleBindView2() {
-    console.log('handleBindView2');
-  },
-  handleBindView3() {
-    console.log('handleBindView3');
-  },
 
   /**
    * 生命周期函数--监听页面加载
