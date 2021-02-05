@@ -1,2 +1,0 @@
-<view class="titleclass">{{title}}</view>
-<view>{{data}}</view>

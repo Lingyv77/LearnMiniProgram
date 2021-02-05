@@ -1,3 +1,0 @@
-<view class="title">{{title}}</view>
-<view class="contents">我的自定义组件</view>
-<comp-own/>
