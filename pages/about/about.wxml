@@ -1,2 +1,11 @@
+<!-- Toast -->
+<button size="mini" bindtap="handleShowToast">showToast</button>
 
+<!-- Modal -->
+<button size="mini" bindtap="handleShowModal">showModal</button>
 
+<!-- Loading -->
+<button size="mini" bindtap="handleShowLoading">showLoading</button>
+
+<!-- ActionSheet-->
+<button size="mini" bindtap="handleShowActionSheet">showActionSheet</button>

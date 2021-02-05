@@ -1,65 +1,44 @@
 // pages/about/about.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  handleShowToast() {
+    wx.showToast({
+      title: '支付成功',
+      duration: 1000,
+      icon: 'success' , //弹窗类型
+      success() {
+        console.log('展示弹窗回调');
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  handleShowModal() {
+    wx.showModal({
+      title: '是否确定支付',
+      content: '检测异常操作',
+      // showCancel: false, //是否显示取消按钮
+      cancelColor: '#000000',
+      success(res) {
+        if(res.cancel) {
+          console.log("用户选择了取消操作");
+        }else if(res.confirm) {
+          console.log("用户选择了确定操作")
+        }
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handleShowLoading() {
+    wx.showLoading({
+      title: '正在加载中',
+      mark: true
+    })
+    setTimeout(() => {
+      wx.hideLoading(); //调用这个 wx.hideLoading()函数  Loading 才会消失
+    }, 3000)
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  handleShowActionSheet() {
+    wx.showActionSheet({
+      itemList: ['相册','拍照'],
+    })
   }
 })
