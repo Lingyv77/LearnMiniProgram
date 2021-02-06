@@ -3,11 +3,11 @@
 
 <!-- Modal -->
 <button size="mini" bindtap="handleShowModal">showModal</button>
-
+  
 <!-- Loading -->
 <button size="mini" bindtap="handleShowLoading">showLoading</button>
 
-<!-- ActionSheet-->
+<!-- ActionSheet--> 
 <button size="mini" bindtap="handleShowActionSheet">showActionSheet</button>
 
 <!-- 分享按钮 -->
